@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Simple JS Task List</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Javascript simple Todo List with Local Storage</h1>
+    <main class="tasks-card">
+      <div class="add-tasks">
+        <form class="task-form">
+          <div class="form-group">
+            <label for="task">New task:</label>
+            <input
+              type="text"
+              name="task"
+              id="task"
+              placeholder="..."
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="deadline">Deadline:</label>
+            <input type="date" name="deadline" id="deadline" />
+          </div>
+          <div class="form-group">
+            <label for="important">Important </label>
+            <input type="checkbox" id="important" class="neumorphism" />
+          </div>
+
+          <input type="submit" value="Submit" class="button" />
+        </form>
+      </div>
+      <div class="view-tasks">
+        <input type="text" name="filter" id="filter" placeholder="Search..." />
+        <div class="task-header">
+          <p><i data-feather="database"></i>Task Title</p>
+          <p><i data-feather="clock"></i>Deadline</p>
+          <p><i data-feather="trash-2"></i>Delete</p>
+        </div>
+        <ul class="tasks-collection"></ul>
+        <a href="#" class="button clear-button">Clear All Task</a>
+      </div>
+    </main>
+    <!-- example icon -->
+    <!-- <i data-feather="circle"></i> -->
+
+    <!-- JS -->
+    <script src="app.js"></script>
+    <!-- Icons setup  -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

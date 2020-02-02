@@ -1,0 +1,210 @@
+/*
+Dark grey #393e46
+Light grey #5c636e
+White grey #f7f7f7
+Yellow #f8b500
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #5c636e;
+  font-family: "Montserrat", sans-serif;
+}
+body h1 {
+  text-align: center;
+  margin: 1.5rem auto;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #5c636e;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+    -2px -2px 2px rgba(255, 255, 255, 0.1);
+}
+
+.add-tasks {
+  color: #f8b500;
+  margin: 1rem 0;
+}
+
+.tasks-card {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.task-form {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+}
+.view-tasks {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  padding: 3rem;
+  border-radius: 11px;
+  background: #5c636e;
+  box-shadow: 35px 35px 70px #515761, -35px -35px 70px #676f7b;
+}
+
+label {
+  margin-right: 1rem;
+}
+
+.view-tasks a.button {
+  width: 50%;
+  margin: 5rem auto 3rem auto;
+}
+
+input[type="text"],
+input[type="date"] {
+  background-color: transparent;
+  color: #f7f7f7;
+  outline: none;
+  padding: 0.7rem;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+::placeholder {
+  color: white;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-header {
+  color: #393e46;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.task-header p {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  outline: none;
+  background-color: #5c636e;
+  text-decoration: none;
+  color: #f7f7f7;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+
+  background: #5c636e;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #626a76, #535963);
+  box-shadow: 8px 8px 15px #4e545e, -8px -8px 15px #6a727f;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  border-radius: 25px;
+  background: linear-gradient(145deg, #626a76, #535963);
+  box-shadow: 8px 8px 15px #4e545ed0, -8px -8px 15px #6a727fc4;
+}
+.button:active {
+  border-radius: 25px;
+  background: #5c636e;
+  box-shadow: inset 8px 8px 15px #4e545e, inset -8px -8px 15px #6a727f;
+}
+
+.list-element {
+  color: white;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.089);
+}
+
+.delete-item {
+  color: white;
+  font-size: 1.2rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+i {
+  color: white;
+  font-size: 2rem;
+}
+.important {
+  color: #f8b500;
+}
+input[type="checkbox"].neumorphism {
+  position: relative;
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 2px;
+  background: linear-gradient(145deg, #535963, #626a76);
+  box-shadow: 3px 3px 6px #4e545e, -3px -3px 6px #6a727f;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+input[type="checkbox"].neumorphism:checked {
+  border-radius: 2px;
+  background: #5c636e;
+  box-shadow: inset 3px 3px 6px #4e545e, inset -3px -3px 6px #6a727f;
+}
+
+input[type="checkbox"].neumorphism:checked::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 15px;
+  color: #f8b500;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 800px) {
+  .tasks-card {
+    width: 100%;
+  }
+  .view-tasks a.button {
+    width: 100%;
+  }
+  .task-form {
+    flex-direction: column;
+    padding: 1rem;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .task-form div {
+    margin-bottom: 1rem;
+  }
+  .task-form input[type="submit"] {
+    text-align: center;
+    align-self: center;
+  }
+  .view-tasks {
+    margin: 1rem 0.8rem;
+  }
+}
